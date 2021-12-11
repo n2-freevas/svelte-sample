@@ -8,8 +8,8 @@
 
     onMount( async()=>{
         if($catsStore.length == 0){
-            //$catsStore = await getCats(10)
-            $catsStore = await getCatsMock()
+            $catsStore = await getCats(10)
+            //$catsStore = await getCatsMock()
             console.log($catsStore)
         }
     })
