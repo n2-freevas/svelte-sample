@@ -34,7 +34,7 @@
             </div>
             <div class='menu-row-list'>
                 {#each $mainmenus as menu}
-                    <HeaderMenuBox name={menu.name} path={menu.path} explain={menu.explain}></HeaderMenuBox>
+                    <HeaderMenuBox name={menu.name} path={menu.path}></HeaderMenuBox>
                 {/each}
             </div>
         </header>
