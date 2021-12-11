@@ -13,7 +13,6 @@ const cat_get = async (url, request?) => {
   return res.data
 }
 
-/* catAPIを叩いて、 */
 export const getCats = async (limit:number = 3): Promise<CatModel[]>=> {
     try{
       // @ts-ignore
