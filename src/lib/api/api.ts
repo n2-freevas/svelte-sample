@@ -2,7 +2,7 @@
 import axios from 'axios'
 
 function switchBaseURL() {
-  return "https://api.thecatapi.com/v1/images"
+  return "https://you.backendcom/"
 }
 
 // あなたのサーバーにアクセスする基本的なAPI
