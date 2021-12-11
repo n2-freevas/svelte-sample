@@ -5,12 +5,21 @@
     import { catsStore } from '$lib/store/CatStore';
     import { onMount } from 'svelte';
     import { goto } from '$app/navigation';
+    import easytoast from '$lib/component/toast/summon'
 
     onMount( async()=>{
         if($catsStore.length == 0){
-            $catsStore = await getCats(10)
-            //$catsStore = await getCatsMock()
-            console.log($catsStore)
+            try{
+                $catsStore = await getCats(10)
+                //$catsStore = await getCatsMock()
+            }
+            catch{
+                easytoast.errorToastPush('catApiから何も取れなかったニャン')
+            }
+            finally{
+                console.log($catsStore)
+            }
+            
         }
     })
 
