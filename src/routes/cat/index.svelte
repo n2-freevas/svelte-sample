@@ -1,14 +1,15 @@
 <script lang="ts">
     import MediaQuery from 'svelte-media-query'
     import CatApiComponent from '$lib/component/Home/CatApiComponent.svelte'
-    import { getCats } from '$lib/api/catApi'
+    import { getCats, getCatsMock } from '$lib/api/catApi'
     import { catsStore } from '$lib/store/CatStore';
     import { onMount } from 'svelte';
     import { goto } from '$app/navigation';
 
     onMount( async()=>{
         if($catsStore.length == 0){
-            $catsStore = await getCats(10)
+            //$catsStore = await getCats(10)
+            $catsStore = await getCatsMock()
             console.log($catsStore)
         }
     })
